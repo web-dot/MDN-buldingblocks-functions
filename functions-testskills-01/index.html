@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <section>
+
+    </section>
+    <style>
+        body{
+            background-color: burlywood;
+            font-size: 100px;
+            font-family:Arial, Helvetica, sans-serif; 
+            color:green;
+            text-align: center;
+        }
+    </style>
+    <script>
+        let names = ['Chris', 'Li Kang', 'Anne', 'Francesca', 'Mustafa', 'Tina', 'Bert', 'Jada']
+        let para = document.createElement('p');
+
+        // Add your code here
+        let randName = names[Math.floor(Math.random(names)*7)];
+        function printRand(){
+        console.log(randName);
+        }
+        para.textContent = randName;
+        // Don't edit the code below here!
+        let section = document.querySelector('section');
+        section.innerHTML = ' ';
+
+        section.appendChild(para);
+
+        const body = document.querySelector('body');
+        
+        if (randName ==='Chris') {
+            body.style.backgroundColor = 'white';
+            body.style.color = 'green';
+        } else if (randName ==='Li Kang') {
+            body.style.backgroundColor = 'white';
+            body.style.color = 'red';
+        } else if (randName ==='Anne') {
+            body.style.backgroundColor = 'white';
+            body.style.color = 'pink';
+        } else if (randName ==='Francesca') {
+            body.style.backgroundColor = 'white';
+            body.style.color = 'blue';
+        } else if (randName ==='Mustafa') {
+            body.style.backgroundColor = 'white';
+            body.style.color = 'grey';
+        } else if (randName ==='Tina') {
+            body.style.backgroundColor = 'white';
+            body.style.color = 'cyan';
+        } else if(randName ==='Bert') {
+            body.style.backgroundColor = 'white';
+            body.style.color = 'black';
+        } else {
+            body.style.backgroundColor = 'white';
+            body.style.color = 'yellow';
+        }
+
+    </script>
+</body>
+</html>
