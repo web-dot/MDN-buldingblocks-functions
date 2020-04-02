@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <section>
+
+    </section>
+    <style>
+        body{
+            background-color: burlywood;
+            font-size: 100px;
+            font-family:Arial, Helvetica, sans-serif; 
+            color:green;
+            text-align: center;
+        }
+    </style>
+    <script>
+        let names = ['Chris', 'Li Kang', 'Anne', 'Francesca', 'Mustafa', 'Tina', 'Bert', 'Jada']
+        let para = document.createElement('p');
+
+        // Add your code here
+        function random (min, max) {
+            const num = Math.floor(Math.random() * (max-min)) + min;
+            return num;
+        } 
+
+        function chooseItem(array){
+            let choice = array[random(0, array.length)];
+            return choice;
+        }
+        // let randName = names[Math.floor(Math.random(names)*7)];
+        // function printRand(){
+        // console.log(randName);
+        // }
+        para.textContent = chooseItem(names);
+        // Don't edit the code below here!
+        let section = document.querySelector('section');
+        section.innerHTML = ' ';
+
+        section.appendChild(para);
+
+        const body = document.querySelector('body');
+
+        let nameForColor = chooseItem(names);
+
+        
+        if (nameForColor ==='Chris') {
+            body.style.backgroundColor = 'yellow';
+            body.style.color = 'green';
+        } else if (nameForColor ==='Li Kang') {
+            body.style.backgroundColor = 'white';
+            body.style.color = 'red';
+        } else if (nameForColor ==='Anne') {
+            body.style.backgroundColor = 'green';
+            body.style.color = 'pink';
+        } else if (nameForColor ==='Francesca') {
+            body.style.backgroundColor = 'pink';
+            body.style.color = 'blue';
+        } else if (nameForColor ==='Mustafa') {
+            body.style.backgroundColor = 'black';
+            body.style.color = 'grey';
+        } else if (nameForColor ==='Tina') {
+            body.style.backgroundColor = 'red';
+            body.style.color = 'cyan';
+        } else if(nameForColor ==='Bert') {
+            body.style.backgroundColor = 'white';
+            body.style.color = 'black';
+        }
+
+    </script>
+</body>
+</html>
